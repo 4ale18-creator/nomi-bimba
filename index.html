@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#ff6b6b">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Nomi per Bimba - Light</title>
+    <style>
+        :root {
+            --primary: #ff6b6b; /* Corallo */
+            --secondary: #4ecdc4; /* Turchese */
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #2d3436;
+            --text-light: #636e72;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 75px; /* Spazio per la nav bar inferiore */
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #ee5253);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 { margin: 0; font-size: 1.4rem; font-weight: 800; }
+
+        /* Barra di Ricerca */
+        .search-container {
+            padding: 10px 15px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 8px rgba(255, 107, 107, 0.15);
+        }
+
+        /* Pagine Generiche */
+        .page { display: none; padding: 15px; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Pagina ELENCO: Name Card */
+        .name-card {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            padding: 16px 20px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.1s;
+        }
+
+        .name-card:active { transform: scale(0.98); }
+        .name-card strong { font-size: 1.1rem; font-weight: 600; }
+
+        .fav-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            color: #ddd;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .fav-btn.is-fav { color: var(--primary); animation: heartBeat 0.3s ease-out; }
+
+        @keyframes heartBeat { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
+
+        /* Pagina SFOGLIA: Slider Immersivo */
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 10px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slider-container::-webkit-scrollbar { display: none; }
+
+        .slide {
+            min-width: 80vw;
+            height: 60vh;
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            scroll-snap-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide h2 {
+            color: var(--primary);
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        .slider-hint {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        /* Pagina RIEPILOGO */
+        .summary-list { display: flex; flex-direction: column; gap: 8px; }
+        .summary-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            display: flex;
+            justify-content: space-between;
+        }
+        .summary-item::after { content: "❤️"; font-size: 0.9rem; }
+
+        /* Altri stati */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+            background: white;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        .empty-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+
+        /* Tasto SORPRENDIMI (Floating Action Button) */
+        .random-fab {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--secondary), #2bcbba);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 22px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 5px 20px rgba(78, 205, 196, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 99;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .random-fab:active { transform: scale(0.95); box-shadow: 0 2px 10px rgba(78, 205, 196, 0.2); }
+
+        /* Barra di Navigazione Inferiore */
+        nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0 8px 0; /* Padding extra sotto per iPhone bar */
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.04);
+            z-index: 1000;
+            padding-bottom: calc(8px + env(safe-area-inset-bottom));
+        }
+
+        nav button {
+            border: none;
+            background: none;
+            color: #b2bec3;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 30%;
+        }
+
+        nav button.active-nav { color: var(--primary); }
+        .nav-icon { font-size: 1.6rem; margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="view-title">Nomi per Bimba</h1>
+</header>
+
+<div class="search-container" id="search-box">
+    <input type="text" id="searchInput" class="search-input" placeholder="Cerca tra migliaia di nomi..." onkeyup="filterNames()">
+</div>
+
+<div id="home" class="page active">
+    <div id="full-list">
+        <div class="empty-state">Caricamento nomi...</div>
+    </div>
+</div>
+
+<div id="slider" class="page">
+    <div class="slider-hint">Scorri lateralmente &rarr;</div>
+    <div id="fav-slider" class="slider-container">
+        </div>
+</div>
+
+<div id="sintesi" class="page">
+    <div id="summary-list" class="summary-list">
+        </div>
+</div>
+
+<button class="random-fab" id="randomBtn" onclick="luckyDip()">
+    <span>🎲</span> nome a sorpresa
+</button>
+
+<nav>
+    <button onclick="changeTab('home', this)" class="active-nav">
+        <span class="nav-icon">📚</span> Elenco
+    </button>
+    <button onclick="changeTab('slider', this)">
+        <span class="nav-icon">✨</span> Sfoglia
+    </button>
+    <button onclick="changeTab('sintesi', this)">
+        <span class="nav-icon">📝</span> Riepilogo
+    </button>
+</nav>
+
+<script src="database.js"></script>
+<script>
+    // --- STATO DELL'APP ---
+    let nomiData = []; 
+    let nomiFiltrati = []; 
+    let preferiti = JSON.parse(localStorage.getItem('mieiPreferitiLight')) || [];
+
+    // --- FUNZIONE DI INIZIALIZZAZIONE (CHIAMATA AL CARICAMENTO) ---
+    function inizializzaApp() {
+        const listContainer = document.getElementById('full-list');
+        
+        // 1. Controllo se la variabile esiste nel file database.js
+        if (typeof nomiDatabase !== 'undefined' && Array.isArray(nomiDatabase)) {
+            
+            // 2. Pulizia e Ordinamento (usiamo 'nome' minuscolo come nel tuo esempio)
+            nomiData = [...nomiDatabase].sort((a, b) => {
+                let nomeA = a.nome || ""; // Gestione errore se manca la proprietà nome
+                let nomeB = b.nome || "";
+                return nomeA.localeCompare(nomeB);
+            });
+
+            nomiFiltrati = [...nomiData];
+            
+            // 3. Avvio Rendering
+            renderHome();
+            console.log("App caricata con " + nomiData.length + " nomi.");
+        } else {
+            console.error("Database non trovato!");
+            if(listContainer) {
+                listContainer.innerHTML = "<div style='padding:20px; color:red;'>Errore: Variabile 'nomiDatabase' non trovata in database.js</div>";
+            }
+        }
+    }
+
+    // --- FUNZIONE RENDER HOME (LA PIÙ IMPORTANTE) ---
+    window.renderHome = function() {
+        const list = document.getElementById('full-list');
+        if (!list) return;
+
+        if (nomiFiltrati.length === 0) {
+            list.innerHTML = "<p style='padding:20px;'>Nessun nome trovato.</p>";
+            return;
+        }
+
+        list.innerHTML = nomiFiltrati.map(obj => {
+            const n = obj.nome; // Qui leggiamo la proprietà nome dal tuo JS
+            const isFav = preferiti.includes(n);
+            return `
+                <div class="name-card" style="background:white; margin:10px; padding:15px; border-radius:15px; display:flex; justify-content:space-between; align-items:center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <strong>${n}</strong>
+                    <button class="fav-btn" onclick="window.toggleFav('${n}')" style="border:none; background:none; font-size:1.5rem; cursor:pointer; color: ${isFav ? '#ff6b6b' : '#eee'}">
+                        ${isFav ? '❤️' : '🤍'}
+                    </button>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // --- TOGGLE PREFERITI ---
+    window.toggleFav = function(n) {
+        const idx = preferiti.indexOf(n);
+        if (idx > -1) preferiti.splice(idx, 1);
+        else preferiti.push(n);
+        localStorage.setItem('mieiPreferitiLight', JSON.stringify(preferiti));
+        renderHome();
+    };
+
+    // --- FILTRO RICERCA ---
+    window.filterNames = function() {
+        const q = document.getElementById('searchInput').value.toLowerCase();
+        nomiFiltrati = nomiData.filter(obj => 
+            obj.nome && obj.nome.toLowerCase().includes(q)
+        );
+        renderHome();
+    };
+
+    // Avvio al caricamento della pagina
+    window.onload = inizializzaApp;
+
+    // --- LOGICA DI NAVIGAZIONE ---
+    function changeTab(pageId, btnElement) {
+        // Nascondi tutte le pagine
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        // Mostra la pagina scelta
+        document.getElementById(pageId).classList.add('active');
+        
+        // Aggiorna titolo header
+        const titoli = {'home': 'Elenco Nomi', 'slider': 'I tuoi Preferiti', 'sintesi': 'Riepilogo Scelte'};
+        document.getElementById('view-title').innerText = titoli[pageId];
+
+        // Aggiorna lo stato dei bottoni nella nav bar
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active-nav'));
+        btnElement.classList.add('active-nav');
+
+        // Gestisci visibilità barra ricerca e tasto random
+        const isHome = (pageId === 'home');
+        document.getElementById('search-box').style.display = isHome ? 'block' : 'none';
+        document.getElementById('randomBtn').style.display = isHome ? 'flex' : 'none';
+
+        // Renderizza i contenuti specifici se necessario
+        if (pageId === 'slider') renderSlider();
+        if (pageId === 'sintesi') renderSintesi();
+        
+        // Torna in cima alla pagina
+        window.scrollTo(0, 0);
+    }
+
+    // --- FUNZIONALITÀ CORE ---
+
+    // 1. GESTIONE PREFERITI
+    function toggleFav(nome) {
+        const index = preferiti.indexOf(nome);
+        if (index > -1) {
+            preferiti.splice(index, 1); // Rimuovi
+        } else {
+            preferiti.push(nome); // Aggiungi
+        }
+        
+        // Salva nel browser
+        localStorage.setItem('mieiPreferitiLight', JSON.stringify(preferiti));
+        
+        // Aggiorna la vista corrente (senza ricaricare tutto)
+        renderHome();
+    }
+
+    // 2. RICERCA / FILTRO
+    function filterNames() {
+        const query = document.getElementById('searchInput').value.toLowerCase().strip();
+        if(query === "") {
+            nomiFiltrati = [...nomiData];
+        } else {
+            nomiFiltrati = nomiData.filter(n => n.nome.toLowerCase().includes(query));
+        }
+        renderHome();
+    }
+
+    // 3. TASTO SORPRENDIMI (Mi sento fortunato)
+    function luckyDip() {
+        if (nomiData.length === 0) return;
+
+        // Reset ricerca per mostrare tutti
+        document.getElementById('searchInput').value = "";
+        nomiFiltrati = [...nomiData];
+        renderHome();
+
+        // Scegli indice a caso
+        const randomIndex = Math.floor(Math.random() * nomiData.length);
+        const nomeScelto = nomiData[randomIndex].nome;
+
+        // Evidenzia visivamente il nome (piccolo trick UI)
+        // Nota: Con liste enormi (4000+ nomi), lo scrolling diretto può essere lento.
+        // Meglio filtrare la lista per mostrare solo quello.
+        
+        document.getElementById('searchInput').value = nomeScelto;
+        filterNames(); // Mostra solo il nome fortunato
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --- RENDERING DELLE VISTE ---
+
+    // Render Pagina ELENCO
+    function renderHome() {
+        const container = document.getElementById('full-list');
+        
+        if (nomiFiltrati.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <span class="empty-icon">🔍</span>
+                    Nessun nome corrisponde alla ricerca.
+                </div>
+            `;
+            return;
+        }
+
+        // Usiamo DocumentFragment per performance migliori con liste lunghe
+        const fragment = document.createDocumentFragment();
+        
+        // Nota: Per liste superiori a 1000 nomi, andrebbe implementato un "Virtual Scroll"
+        // Qui limitiamo il rendering ai primi 500 per evitare crash del browser, 
+        // la ricerca comunque funziona sull'intero database.
+        const nomiDaMostrare = nomiFiltrati.slice(0, 500);
+
+        nomiDaMostrare.forEach(n => {
+            const isFav = preferiti.includes(n.nome);
+            
+            const card = document.createElement('div');
+            card.className = 'name-card';
+            card.innerHTML = `
+                <strong>${n.nome}</strong>
+                <button class="fav-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFav('${n.nome}')">
+                    ${isFav ? '❤️' : '🤍'}
+                </button>
+            `;
+            fragment.appendChild(card);
+        });
+
+        container.innerHTML = ''; // Pulisci
+        container.appendChild(fragment);
+        
+        if(nomiFiltrati.length > 500) {
+            const notice = document.createElement('div');
+            notice.style = 'text-align:center; padding: 10px; color:#95a5a6; font-size:0.8rem;';
+            notice.innerText = `Mostrati primi 500 nomi su ${nomiFiltrati.length}. Usa la ricerca per trovarne altri.`;
+            container.appendChild(notice);
+        }
+    }
+
+    // Render Pagina SFOGLIA (Slider Preferiti)
+    function renderSlider() {
+        const container = document.getElementById('fav-slider');
+        
+        if (preferiti.length === 0) {
+            container.parentElement.innerHTML = `
+                <div class="empty-state">
+                    <span class="empty-icon">✨</span>
+                    Aggiungi dei nomi ai preferiti (tocca il cuore ❤️)<br>per sfogliarli qui.
+                </div>
+            `;
+            return;
+        }
+
+        // Ripristina struttura se era empty state
+        if(!document.querySelector('.slider-hint')) {
+             document.getElementById('slider').innerHTML = '<div class="slider-hint">Scorri lateralmente &rarr;</div><div id="fav-slider" class="slider-container"></div>';
+             // Devo riricavare il container
+             renderSlider(); return; 
+        }
+
+        // Genera le slide con solo il nome gigante
+        document.getElementById('fav-slider').innerHTML = preferiti.map(nome => `
+            <div class="slide">
+                <h2>${nome}</h2>
+            </div>
+        `).join('');
+    }
+
+    // Render Pagina RIEPILOGO
+    function renderSintesi() {
+        const container = document.getElementById('summary-list');
+        
+        if (preferiti.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <span class="empty-icon">📝</span>
+                    La tua lista è vuota.
+                </div>
+            `;
+            return;
+        }
+
+        // Ordina preferiti alfabeticamente per la sintesi
+        const preferitiOrdinati = [...preferiti].sort((a, b) => a.localeCompare(b.nome));
+
+        container.innerHTML = preferitiOrdinati.map(nome => `
+            <div class="summary-item">
+                ${nome}
+            </div>
+        `).join('');
+    }
+
+    // --- AVVIO ---
+    caricaDati(); // Carica JSON e renderizza home
+
+</script>
+
+</body>
+</html>
