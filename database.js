@@ -1,65 +1,8 @@
 const nomiDatabase = [
     {
-        "nome": "Abbondanza"
-    },
-    {
-        "nome": "Abbondanzia"
-    },
-    {
-        "nome": "Abbondia"
-    },
-    {
         "nome": "Abbondina"
     },
-    {
-        "nome": "Abela"
-    },
-    {
-        "nome": "Abelarda"
-    },
-    {
-        "nome": "Abelina"
-    },
-    {
-        "nome": "Abrama"
-    },
-    {
-        "nome": "Abramina"
-    },
-    {
-        "nome": "Accursa"
-    },
-    {
-        "nome": "Accursia"
-    },
-    {
-        "nome": "Acheropita"
-    },
-    {
-        "nome": "Achilla"
-    },
-    {
-        "nome": "Achillea"
-    },
-    {
-        "nome": "Achillina"
-    },
-    {
-        "nome": "Achiropita"
-    },
-    {
-        "nome": "Acilia"
-    },
-    {
-        "nome": "Ada"
-    },
-    {
-        "nome": "Adalberta"
-    },
-    {
-        "nome": "Adalgisa"
-    },
-    {
+	{
         "nome": "Adalia"
     },
     {
@@ -67,9 +10,6 @@ const nomiDatabase = [
     },
     {
         "nome": "Adalisa"
-    },
-    {
-        "nome": "Adama"
     },
     {
         "nome": "Adamaria"
@@ -81,196 +21,28 @@ const nomiDatabase = [
         "nome": "Addolorata"
     },
     {
-        "nome": "Addolorazione"
-    },
-    {
-        "nome": "Adea"
-    },
-    {
-        "nome": "Adela"
-    },
-    {
-        "nome": "Adelaida"
-    },
-    {
         "nome": "Adelaide"
-    },
-    {
-        "nome": "Adelasia"
-    },
-    {
-        "nome": "Adelca"
-    },
-    {
-        "nome": "Adelcisa"
     },
     {
         "nome": "Adele"
     },
     {
-        "nome": "Adelelma"
-    },
-    {
-        "nome": "Adelfa"
-    },
-    {
-        "nome": "Adelfina"
-    },
-    {
         "nome": "Adelia"
-    },
-    {
-        "nome": "Adelina"
-    },
-    {
-        "nome": "Adelinda"
-    },
-    {
-        "nome": "Adelisa"
-    },
-    {
-        "nome": "Adelisia"
-    },
-    {
-        "nome": "Adelita"
-    },
-    {
-        "nome": "Adelma"
-    },
-    {
-        "nome": "Adelmina"
-    },
-    {
-        "nome": "Adelmira"
-    },
-    {
-        "nome": "Adema"
-    },
-    {
-        "nome": "Ademara"
-    },
-    {
-        "nome": "Ademia"
-    },
-    {
-        "nome": "Ademina"
     },
     {
         "nome": "Aden"
     },
     {
-        "nome": "Adeodata"
-    },
-    {
-        "nome": "Aderita"
-    },
-    {
-        "nome": "Adia"
-    },
-    {
-        "nome": "Adige"
-    },
-    {
-        "nome": "Adigina"
-    },
-    {
-        "nome": "Adigrat"
-    },
-    {
-        "nome": "Adilia"
-    },
-    {
-        "nome": "Adina"
-    },
-    {
-        "nome": "Adinolfa"
-    },
-    {
-        "nome": "Adionilla"
-    },
-    {
-        "nome": "Adolfa"
-    },
-    {
-        "nome": "Adolfina"
-    },
-    {
-        "nome": "Adona"
-    },
-    {
-        "nome": "Adonella"
-    },
-    {
-        "nome": "Adoranda"
-    },
-    {
         "nome": "Adorata"
-    },
-    {
-        "nome": "Adorna"
-    },
-    {
-        "nome": "Adrasta"
-    },
-    {
-        "nome": "Adria"
     },
     {
         "nome": "Adriana"
     },
     {
-        "nome": "Adua"
-    },
-    {
-        "nome": "Aduana"
-    },
-    {
-        "nome": "Affortunata"
-    },
-    {
-        "nome": "Afra"
-    },
-    {
-        "nome": "Africa"
-    },
-    {
-        "nome": "Africana"
-    },
-    {
-        "nome": "Afrodite"
-    },
-    {
-        "nome": "Agape"
-    },
-    {
         "nome": "Agata"
     },
     {
-        "nome": "Agatella"
-    },
-    {
-        "nome": "Agatina"
-    },
-    {
-        "nome": "Agatoclia"
-    },
-    {
-        "nome": "Agazia"
-    },
-    {
-        "nome": "Agea"
-    },
-    {
-        "nome": "Aglaia"
-    },
-    {
-        "nome": "Agnella"
-    },
-    {
         "nome": "Agnese"
-    },
-    {
-        "nome": "Agnesina"
     },
     {
         "nome": "Agostina"
@@ -285,172 +57,31 @@ const nomiDatabase = [
         "nome": "Aida"
     },
     {
-        "nome": "Aide"
-    },
-    {
-        "nome": "Ala"
-    },
-    {
         "nome": "Aladina"
-    },
-    {
-        "nome": "Alaghiera"
     },
     {
         "nome": "Alba"
     },
     {
-        "nome": "Albania"
-    },
-    {
         "nome": "Albarosa"
-    },
-    {
-        "nome": "Alberica"
-    },
-    {
-        "nome": "Alberice"
-    },
-    {
-        "nome": "Alberta"
     },
     {
         "nome": "Albertina"
     },
     {
-        "nome": "Albina"
-    },
-    {
-        "nome": "Alboina"
-    },
-    {
-        "nome": "Albsana"
-    },
-    {
-        "nome": "Alcea"
-    },
-    {
-        "nome": "Alcesta"
-    },
-    {
-        "nome": "Alceste"
-    },
-    {
-        "nome": "Alcestina"
-    },
-    {
-        "nome": "Alcida"
-    },
-    {
-        "nome": "Alcina"
-    },
-    {
-        "nome": "Alcisa"
-    },
-    {
         "nome": "Alda"
-    },
-    {
-        "nome": "Aldeandra"
-    },
-    {
-        "nome": "Aldegarda"
-    },
-    {
-        "nome": "Aldegonda"
-    },
-    {
-        "nome": "Aldemara"
-    },
-    {
-        "nome": "Aldemia"
-    },
-    {
-        "nome": "Aldemina"
-    },
-    {
-        "nome": "Aldemira"
-    },
-    {
-        "nome": "Alderica"
-    },
-    {
-        "nome": "Alderice"
-    },
-    {
-        "nome": "Alderina"
-    },
-    {
-        "nome": "Aldesina"
-    },
-    {
-        "nome": "Aldesira"
-    },
-    {
-        "nome": "Aldezza"
-    },
-    {
-        "nome": "Aldina"
-    },
-    {
-        "nome": "Aldobranda"
-    },
-    {
-        "nome": "Aldovina"
-    },
-    {
-        "nome": "Alduina"
     },
     {
         "nome": "Aleandra"
     },
     {
-        "nome": "Alearda"
-    },
-    {
-        "nome": "Alemena"
-    },
-    {
-        "nome": "Alesia"
-    },
-    {
         "nome": "Alessandra"
-    },
-    {
-        "nome": "Alessandria"
-    },
-    {
-        "nome": "Alessandrina"
     },
     {
         "nome": "Alessia"
     },
     {
-        "nome": "Alessina"
-    },
-    {
-        "nome": "Aletta"
-    },
-    {
-        "nome": "Alfa"
-    },
-    {
         "nome": "Alfea"
-    },
-    {
-        "nome": "Alferia"
-    },
-    {
-        "nome": "Alfia"
-    },
-    {
-        "nome": "Alfiera"
-    },
-    {
-        "nome": "Alfierina"
-    },
-    {
-        "nome": "Alfina"
     },
     {
         "nome": "Alfonsa"
@@ -459,34 +90,7 @@ const nomiDatabase = [
         "nome": "Alfonsina"
     },
     {
-        "nome": "Alfonza"
-    },
-    {
-        "nome": "Alfonzina"
-    },
-    {
-        "nome": "Alfreda"
-    },
-    {
         "nome": "Alfredina"
-    },
-    {
-        "nome": "Alfrida"
-    },
-    {
-        "nome": "Alfride"
-    },
-    {
-        "nome": "Algeria"
-    },
-    {
-        "nome": "Algerina"
-    },
-    {
-        "nome": "Algia"
-    },
-    {
-        "nome": "Algisa"
     },
     {
         "nome": "Alice"
@@ -498,124 +102,19 @@ const nomiDatabase = [
         "nome": "Alida"
     },
     {
-        "nome": "Alide"
-    },
-    {
-        "nome": "Alidea"
-    },
-    {
-        "nome": "Alidora"
-    },
-    {
-        "nome": "Alighiera"
-    },
-    {
         "nome": "Alina"
-    },
-    {
-        "nome": "Alinda"
-    },
-    {
-        "nome": "Alipia"
     },
     {
         "nome": "Alisa"
     },
     {
-        "nome": "Alisia"
-    },
-    {
         "nome": "Allegra"
-    },
-    {
-        "nome": "Allegrina"
     },
     {
         "nome": "Alma"
     },
     {
-        "nome": "Almarosa"
-    },
-    {
-        "nome": "Almeria"
-    },
-    {
-        "nome": "Almerica"
-    },
-    {
-        "nome": "Almerina"
-    },
-    {
-        "nome": "Almerinda"
-    },
-    {
-        "nome": "Almina"
-    },
-    {
-        "nome": "Almira"
-    },
-    {
-        "nome": "Alodia"
-    },
-    {
         "nome": "Aloisa"
-    },
-    {
-        "nome": "Aloise"
-    },
-    {
-        "nome": "Alpa"
-    },
-    {
-        "nome": "Altabella"
-    },
-    {
-        "nome": "Altavilla"
-    },
-    {
-        "nome": "Altea"
-    },
-    {
-        "nome": "Altera"
-    },
-    {
-        "nome": "Alteria"
-    },
-    {
-        "nome": "Altomare"
-    },
-    {
-        "nome": "Altomira"
-    },
-    {
-        "nome": "Alvara"
-    },
-    {
-        "nome": "Alvarina"
-    },
-    {
-        "nome": "Alvisa"
-    },
-    {
-        "nome": "Alvisia"
-    },
-    {
-        "nome": "Amabile"
-    },
-    {
-        "nome": "Amabilia"
-    },
-    {
-        "nome": "Amadea"
-    },
-    {
-        "nome": "Amadia"
-    },
-    {
-        "nome": "Amalfa"
-    },
-    {
-        "nome": "Amalfia"
     },
     {
         "nome": "Amalia"
@@ -624,223 +123,22 @@ const nomiDatabase = [
         "nome": "Amanda"
     },
     {
-        "nome": "Amandina"
-    },
-    {
-        "nome": "Amante"
-    },
-    {
-        "nome": "Amantina"
-    },
-    {
-        "nome": "Amanzia"
-    },
-    {
-        "nome": "Amaranta"
-    },
-    {
-        "nome": "Amarilda"
-    },
-    {
-        "nome": "Amarilli"
-    },
-    {
-        "nome": "Amarillide"
-    },
-    {
-        "nome": "Amata"
-    },
-    {
-        "nome": "Amatrice"
-    },
-    {
-        "nome": "Amberta"
-    },
-    {
         "nome": "Ambra"
-    },
-    {
-        "nome": "Ambretta"
-    },
-    {
-        "nome": "Ambrogia"
-    },
-    {
-        "nome": "Ambrogina"
-    },
-    {
-        "nome": "Ambrosia"
-    },
-    {
-        "nome": "Ambrosina"
-    },
-    {
-        "nome": "Amedea"
-    },
-    {
-        "nome": "Ameglia"
     },
     {
         "nome": "Amelia"
     },
     {
-        "nome": "Amelina"
-    },
-    {
-        "nome": "Amelita"
-    },
-    {
-        "nome": "America"
-    },
-    {
-        "nome": "Ameriga"
-    },
-    {
-        "nome": "Amerina"
-    },
-    {
-        "nome": "Amerinda"
-    },
-    {
-        "nome": "Amica"
-    },
-    {
-        "nome": "Amilcara"
-    },
-    {
-        "nome": "Amina"
-    },
-    {
-        "nome": "Aminda"
-    },
-    {
-        "nome": "Amleta"
-    },
-    {
-        "nome": "Amodia"
-    },
-    {
-        "nome": "Amore"
-    },
-    {
-        "nome": "Amorina"
-    },
-    {
-        "nome": "Amorosa"
-    },
-    {
-        "nome": "Ampelia"
-    },
-    {
-        "nome": "Amulia"
-    },
-    {
         "nome": "Anacleta"
-    },
-    {
-        "nome": "Analina"
     },
     {
         "nome": "Anastasia"
     },
     {
-        "nome": "Anatolia"
-    },
-    {
-        "nome": "Anca"
-    },
-    {
-        "nome": "Ancella"
-    },
-    {
-        "nome": "Ancilla"
-    },
-    {
-        "nome": "Anda"
-    },
-    {
-        "nome": "Andalusa"
-    },
-    {
-        "nome": "Andina"
-    },
-    {
-        "nome": "Andra"
-    },
-    {
-        "nome": "Andreana"
-    },
-    {
-        "nome": "Andreatta"
-    },
-    {
-        "nome": "Andreina"
-    },
-    {
-        "nome": "Andreola"
-    },
-    {
-        "nome": "Andretta"
-    },
-    {
-        "nome": "Andrettina"
-    },
-    {
-        "nome": "Andreuccia"
-    },
-    {
-        "nome": "Andrietta"
-    },
-    {
-        "nome": "Andromaca"
-    },
-    {
-        "nome": "Anella"
-    },
-    {
-        "nome": "Anellina"
-    },
-    {
         "nome": "Angela"
     },
     {
-        "nome": "Angelamaria"
-    },
-    {
-        "nome": "Angelarosa"
-    },
-    {
-        "nome": "Angeletta"
-    },
-    {
         "nome": "Angelica"
-    },
-    {
-        "nome": "Angelina"
-    },
-    {
-        "nome": "Angelita"
-    },
-    {
-        "nome": "Angiola"
-    },
-    {
-        "nome": "Angiolamaria"
-    },
-    {
-        "nome": "Angioletta"
-    },
-    {
-        "nome": "Angiolina"
-    },
-    {
-        "nome": "Aniceta"
-    },
-    {
-        "nome": "Anicetta"
-    },
-    {
-        "nome": "Aniella"
     },
     {
         "nome": "Anita"
@@ -870,9 +168,6 @@ const nomiDatabase = [
         "nome": "Annalisa"
     },
     {
-        "nome": "Annaluisa"
-    },
-    {
         "nome": "Annamaria"
     },
     {
@@ -885,187 +180,19 @@ const nomiDatabase = [
         "nome": "Annarosa"
     },
     {
-        "nome": "Annella"
-    },
-    {
         "nome": "Annetta"
-    },
-    {
-        "nome": "Annettina"
-    },
-    {
-        "nome": "Annibala"
-    },
-    {
-        "nome": "Annibalina"
-    },
-    {
-        "nome": "Annina"
-    },
-    {
-        "nome": "Annita"
-    },
-    {
-        "nome": "Annuccia"
-    },
-    {
-        "nome": "Annuncia"
-    },
-    {
-        "nome": "Annunciata"
-    },
-    {
-        "nome": "Annunzia"
     },
     {
         "nome": "Annunziata"
     },
     {
-        "nome": "Annunziatina"
-    },
-    {
-        "nome": "Annunziazione"
-    },
-    {
-        "nome": "Ansalda"
-    },
-    {
-        "nome": "Anselma"
-    },
-    {
-        "nome": "Anselmina"
-    },
-    {
-        "nome": "Anspertina"
-    },
-    {
-        "nome": "Ansuina"
-    },
-    {
-        "nome": "Anta"
-    },
-    {
-        "nome": "Antea"
-    },
-    {
-        "nome": "Antenora"
-    },
-    {
-        "nome": "Antera"
-    },
-    {
-        "nome": "Antigona"
-    },
-    {
-        "nome": "Antigone"
-    },
-    {
-        "nome": "Antima"
-    },
-    {
-        "nome": "Antimina"
-    },
-    {
-        "nome": "Antioca"
-    },
-    {
-        "nome": "Antonella"
-    },
-    {
-        "nome": "Antonetta"
-    },
-    {
         "nome": "Antonia"
-    },
-    {
-        "nome": "Antonica"
     },
     {
         "nome": "Antonietta"
     },
     {
-        "nome": "Antonilla"
-    },
-    {
-        "nome": "Antonina"
-    },
-    {
-        "nome": "Antonita"
-    },
-    {
-        "nome": "Anzia"
-    },
-    {
-        "nome": "Apollonia"
-    },
-    {
-        "nome": "Appia"
-    },
-    {
-        "nome": "Aprilia"
-    },
-    {
-        "nome": "Aquila"
-    },
-    {
-        "nome": "Aquilina"
-    },
-    {
-        "nome": "Arabella"
-    },
-    {
-        "nome": "Aralda"
-    },
-    {
-        "nome": "Arcangela"
-    },
-    {
-        "nome": "Arcangelina"
-    },
-    {
-        "nome": "Arcisa"
-    },
-    {
-        "nome": "Arda"
-    },
-    {
-        "nome": "Ardita"
-    },
-    {
-        "nome": "Arduina"
-    },
-    {
-        "nome": "Arete"
-    },
-    {
-        "nome": "Arfrosina"
-    },
-    {
-        "nome": "Argantina"
-    },
-    {
-        "nome": "Arge"
-    },
-    {
-        "nome": "Argea"
-    },
-    {
-        "nome": "Argenta"
-    },
-    {
-        "nome": "Argentina"
-    },
-    {
-        "nome": "Argenzia"
-    },
-    {
-        "nome": "Argia"
-    },
-    {
         "nome": "Aria"
-    },
-    {
-        "nome": "Arialda"
     },
     {
         "nome": "Ariana"
@@ -1074,310 +201,43 @@ const nomiDatabase = [
         "nome": "Arianna"
     },
     {
-        "nome": "Ariela"
-    },
-    {
-        "nome": "Ariella"
-    },
-    {
-        "nome": "Arietta"
-    },
-    {
-        "nome": "Arina"
-    },
-    {
-        "nome": "Ariosta"
-    },
-    {
-        "nome": "Aristea"
-    },
-    {
-        "nome": "Aristidina"
-    },
-    {
-        "nome": "Aristodema"
-    },
-    {
-        "nome": "Arlesiana"
-    },
-    {
-        "nome": "Arletta"
-    },
-    {
-        "nome": "Armanda"
+        "nome": "Ariel"
     },
     {
         "nome": "Armandina"
     },
     {
-        "nome": "Armela"
-    },
-    {
-        "nome": "Armelina"
-    },
-    {
-        "nome": "Armelinda"
-    },
-    {
-        "nome": "Armella"
-    },
-    {
-        "nome": "Armellina"
-    },
-    {
-        "nome": "Armena"
-    },
-    {
-        "nome": "Armenia"
-    },
-    {
-        "nome": "Armentina"
-    },
-    {
-        "nome": "Armerina"
-    },
-    {
         "nome": "Armida"
-    },
-    {
-        "nome": "Armilla"
-    },
-    {
-        "nome": "Armina"
-    },
-    {
-        "nome": "Arminda"
-    },
-    {
-        "nome": "Arminia"
-    },
-    {
-        "nome": "Arnalda"
-    },
-    {
-        "nome": "Arnaldina"
-    },
-    {
-        "nome": "Arnolda"
-    },
-    {
-        "nome": "Arolda"
-    },
-    {
-        "nome": "Arpalice"
-    },
-    {
-        "nome": "Arriga"
-    },
-    {
-        "nome": "Arsenia"
-    },
-    {
-        "nome": "Arsilia"
-    },
-    {
-        "nome": "Artemia"
-    },
-    {
-        "nome": "Artemide"
     },
     {
         "nome": "Artemisia"
     },
     {
-        "nome": "Artenia"
-    },
-    {
-        "nome": "Artenice"
-    },
-    {
-        "nome": "Artide"
-    },
-    {
-        "nome": "Artimina"
-    },
-    {
-        "nome": "Artura"
-    },
-    {
-        "nome": "Arturina"
-    },
-    {
-        "nome": "Ascania"
-    },
-    {
-        "nome": "Ascensa"
-    },
-    {
-        "nome": "Ascensina"
-    },
-    {
-        "nome": "Ascenza"
-    },
-    {
-        "nome": "Ascenzina"
-    },
-    {
-        "nome": "Asia"
-    },
-    {
-        "nome": "Asmara"
-    },
-    {
-        "nome": "Aspasia"
-    },
-    {
-        "nome": "Assuera"
-    },
-    {
         "nome": "Assunta"
-    },
-    {
-        "nome": "Assuntina"
-    },
-    {
-        "nome": "Assunzione"
-    },
-    {
-        "nome": "Aster"
-    },
-    {
-        "nome": "Asteria"
     },
     {
         "nome": "Astra"
     },
     {
-        "nome": "Astrea"
-    },
-    {
-        "nome": "Atala"
-    },
-    {
-        "nome": "Atalia"
-    },
-    {
-        "nome": "Atea"
-    },
-    {
         "nome": "Atena"
-    },
-    {
-        "nome": "Atene"
-    },
-    {
-        "nome": "Attala"
-    },
-    {
-        "nome": "Attilia"
-    },
-    {
-        "nome": "Attiliana"
-    },
-    {
-        "nome": "Audenzia"
     },
     {
         "nome": "Augusta"
     },
     {
-        "nome": "Augustina"
-    },
-    {
         "nome": "Aura"
-    },
-    {
-        "nome": "Aurea"
     },
     {
         "nome": "Aurelia"
     },
     {
-        "nome": "Aureliana"
-    },
-    {
-        "nome": "Auretta"
-    },
-    {
         "nome": "Aurora"
-    },
-    {
-        "nome": "Ausilia"
-    },
-    {
-        "nome": "Ausonia"
     },
     {
         "nome": "Ava"
     },
     {
-        "nome": "Avanti"
-    },
-    {
-        "nome": "Ave"
-    },
-    {
-        "nome": "Avelia"
-    },
-    {
-        "nome": "Avelina"
-    },
-    {
-        "nome": "Avellina"
-    },
-    {
-        "nome": "Aventina"
-    },
-    {
-        "nome": "Averina"
-    },
-    {
-        "nome": "Avventina"
-    },
-    {
-        "nome": "Azeglia"
-    },
-    {
-        "nome": "Azelia"
-    },
-    {
-        "nome": "Azelma"
-    },
-    {
-        "nome": "Azia"
-    },
-    {
-        "nome": "Azzella"
-    },
-    {
-        "nome": "Azzolina"
-    },
-    {
         "nome": "Azzurra"
-    },
-    {
-        "nome": "Azzurrina"
-    },
-    {
-        "nome": "Bachisia"
-    },
-    {
-        "nome": "Baingia"
-    },
-    {
-        "nome": "Balbina"
-    },
-    {
-        "nome": "Balda"
-    },
-    {
-        "nome": "Baldina"
-    },
-    {
-        "nome": "Baldovina"
-    },
-    {
-        "nome": "Balduina"
     },
     {
         "nome": "Bambina"
@@ -1386,172 +246,22 @@ const nomiDatabase = [
         "nome": "Barbara"
     },
     {
-        "nome": "Barbarella"
-    },
-    {
-        "nome": "Barbarina"
-    },
-    {
-        "nome": "Barbera"
-    },
-    {
-        "nome": "Barberina"
-    },
-    {
-        "nome": "Bartola"
-    },
-    {
-        "nome": "Bartolina"
-    },
-    {
-        "nome": "Bartolomea"
-    },
-    {
-        "nome": "Basilea"
-    },
-    {
-        "nome": "Basilia"
-    },
-    {
-        "nome": "Basiliola"
-    },
-    {
-        "nome": "Basilissa"
-    },
-    {
-        "nome": "Basilla"
-    },
-    {
-        "nome": "Bassanina"
-    },
-    {
-        "nome": "Bastiana"
-    },
-    {
-        "nome": "Bastianina"
-    },
-    {
-        "nome": "Battistina"
-    },
-    {
-        "nome": "Baudolina"
-    },
-    {
         "nome": "Beata"
     },
     {
         "nome": "Beatrice"
     },
     {
-        "nome": "Belardina"
-    },
-    {
-        "nome": "Belfiore"
-    },
-    {
-        "nome": "Belisaria"
-    },
-    {
         "nome": "Bella"
-    },
-    {
-        "nome": "Bellina"
     },
     {
         "nome": "Benedetta"
     },
     {
-        "nome": "Benedettina"
-    },
-    {
-        "nome": "Bengasina"
-    },
-    {
-        "nome": "Beniamina"
-    },
-    {
-        "nome": "Benigna"
-    },
-    {
-        "nome": "Benilda"
-    },
-    {
-        "nome": "Benilde"
-    },
-    {
-        "nome": "Benina"
-    },
-    {
-        "nome": "Benita"
-    },
-    {
-        "nome": "Benizia"
-    },
-    {
-        "nome": "Bensa"
-    },
-    {
-        "nome": "Benuccia"
-    },
-    {
-        "nome": "Benvenuta"
-    },
-    {
-        "nome": "Beppa"
-    },
-    {
-        "nome": "Beppina"
-    },
-    {
-        "nome": "Berarda"
-    },
-    {
-        "nome": "Berardina"
-    },
-    {
-        "nome": "Berengaria"
-    },
-    {
         "nome": "Berenice"
     },
     {
-        "nome": "Bernadetta"
-    },
-    {
         "nome": "Bernadette"
-    },
-    {
-        "nome": "Bernarda"
-    },
-    {
-        "nome": "Bernardetta"
-    },
-    {
-        "nome": "Bernardina"
-    },
-    {
-        "nome": "Berta"
-    },
-    {
-        "nome": "Bertilla"
-    },
-    {
-        "nome": "Bertina"
-    },
-    {
-        "nome": "Betsabea"
-    },
-    {
-        "nome": "Betta"
-    },
-    {
-        "nome": "Bettina"
-    },
-    {
-        "nome": "Biagia"
-    },
-    {
-        "nome": "Biagina"
     },
     {
         "nome": "Bianca"
@@ -1563,157 +273,16 @@ const nomiDatabase = [
         "nome": "Biancaneve"
     },
     {
-        "nome": "Biancarosa"
-    },
-    {
-        "nome": "Bianchina"
-    },
-    {
-        "nome": "Bibbiana"
-    },
-    {
-        "nome": "Bibiana"
-    },
-    {
         "nome": "Bice"
-    },
-    {
-        "nome": "Bicetta"
-    },
-    {
-        "nome": "Bina"
-    },
-    {
-        "nome": "Bionda"
-    },
-    {
-        "nome": "Biondina"
-    },
-    {
-        "nome": "Birgitta"
-    },
-    {
-        "nome": "Blanda"
-    },
-    {
-        "nome": "Blandina"
-    },
-    {
-        "nome": "Bluetta"
-    },
-    {
-        "nome": "Bona"
-    },
-    {
-        "nome": "Bonacata"
-    },
-    {
-        "nome": "Bonacatta"
-    },
-    {
-        "nome": "Bonacattu"
-    },
-    {
-        "nome": "Bonacatu"
-    },
-    {
-        "nome": "Bonafede"
-    },
-    {
-        "nome": "Bonaria"
-    },
-    {
-        "nome": "Bonarina"
-    },
-    {
-        "nome": "Bonella"
-    },
-    {
-        "nome": "Bonina"
-    },
-    {
-        "nome": "Bonuccia"
-    },
-    {
-        "nome": "Bortola"
-    },
-    {
-        "nome": "Bortolina"
-    },
-    {
-        "nome": "Bortolomea"
-    },
-    {
-        "nome": "Brasile"
-    },
-    {
-        "nome": "Brasilia"
-    },
-    {
-        "nome": "Brasilina"
-    },
-    {
-        "nome": "Brenna"
     },
     {
         "nome": "Brigida"
     },
     {
-        "nome": "Brigidina"
-    },
-    {
         "nome": "Brigitta"
     },
     {
-        "nome": "Brillante"
-    },
-    {
-        "nome": "Brillantina"
-    },
-    {
-        "nome": "Brizia"
-    },
-    {
-        "nome": "Broccola"
-    },
-    {
         "nome": "Bruna"
-    },
-    {
-        "nome": "Brunella"
-    },
-    {
-        "nome": "Brunera"
-    },
-    {
-        "nome": "Brunetta"
-    },
-    {
-        "nome": "Brunilde"
-    },
-    {
-        "nome": "Brunina"
-    },
-    {
-        "nome": "Buonafede"
-    },
-    {
-        "nome": "Cabiria"
-    },
-    {
-        "nome": "Cadira"
-    },
-    {
-        "nome": "Cadore"
-    },
-    {
-        "nome": "Cadorna"
-    },
-    {
-        "nome": "Cafiera"
-    },
-    {
-        "nome": "Calcedonia"
     },
     {
         "nome": "Calista"
@@ -1737,64 +306,25 @@ const nomiDatabase = [
         "nome": "Camilla"
     },
     {
-        "nome": "Candelora"
-    },
-    {
         "nome": "Candida"
     },
     {
         "nome": "Cara"
     },
     {
-        "nome": "Cardina"
-    },
-    {
         "nome": "Carina"
-    },
-    {
-        "nome": "Carissima"
     },
     {
         "nome": "Carla"
     },
     {
-        "nome": "Carletta"
-    },
-    {
-        "nome": "Carlina"
-    },
-    {
         "nome": "Carlotta"
-    },
-    {
-        "nome": "Carlottina"
-    },
-    {
-        "nome": "Carluccia"
     },
     {
         "nome": "Carmela"
     },
     {
-        "nome": "Carmelina"
-    },
-    {
-        "nome": "Carmelinda"
-    },
-    {
-        "nome": "Carmelita"
-    },
-    {
         "nome": "Carmen"
-    },
-    {
-        "nome": "Carmina"
-    },
-    {
-        "nome": "Carminella"
-    },
-    {
-        "nome": "Carmosina"
     },
     {
         "nome": "Carola"
@@ -1803,49 +333,7 @@ const nomiDatabase = [
         "nome": "Carolina"
     },
     {
-        "nome": "Casilde"
-    },
-    {
-        "nome": "Casimira"
-    },
-    {
         "nome": "Cassandra"
-    },
-    {
-        "nome": "Cassia"
-    },
-    {
-        "nome": "Cassiana"
-    },
-    {
-        "nome": "Casta"
-    },
-    {
-        "nome": "Castità"
-    },
-    {
-        "nome": "Castorina"
-    },
-    {
-        "nome": "Castrenza"
-    },
-    {
-        "nome": "Catalda"
-    },
-    {
-        "nome": "Cataldina"
-    },
-    {
-        "nome": "Catalina"
-    },
-    {
-        "nome": "Catarina"
-    },
-    {
-        "nome": "Catella"
-    },
-    {
-        "nome": "Catena"
     },
     {
         "nome": "Caterina"
@@ -1854,190 +342,25 @@ const nomiDatabase = [
         "nome": "Catia"
     },
     {
-        "nome": "Catina"
-    },
-    {
-        "nome": "Catterina"
-    },
-    {
-        "nome": "Catulla"
-    },
-    {
-        "nome": "Cecchina"
-    },
-    {
         "nome": "Cecilia"
-    },
-    {
-        "nome": "Celerina"
-    },
-    {
-        "nome": "Celesta"
     },
     {
         "nome": "Celeste"
     },
     {
-        "nome": "Celestina"
-    },
-    {
-        "nome": "Celia"
-    },
-    {
-        "nome": "Celidonia"
-    },
-    {
-        "nome": "Celina"
-    },
-    {
-        "nome": "Celinia"
-    },
-    {
-        "nome": "Cellina"
-    },
-    {
-        "nome": "Celsa"
-    },
-    {
-        "nome": "Celsina"
-    },
-    {
-        "nome": "Cenerina"
-    },
-    {
-        "nome": "Censina"
-    },
-    {
-        "nome": "Cenza"
-    },
-    {
-        "nome": "Cenzella"
-    },
-    {
-        "nome": "Cenzina"
-    },
-    {
         "nome": "Cesara"
-    },
-    {
-        "nome": "Cesarea"
-    },
-    {
-        "nome": "Cesaria"
-    },
-    {
-        "nome": "Cesarina"
-    },
-    {
-        "nome": "Cesarita"
-    },
-    {
-        "nome": "Cesella"
-    },
-    {
-        "nome": "Cesidia"
-    },
-    {
-        "nome": "Cesina"
-    },
-    {
-        "nome": "Cesira"
-    },
-    {
-        "nome": "Cettina"
-    },
-    {
-        "nome": "Chantal"
-    },
-    {
-        "nome": "Cherubina"
-    },
-    {
-        "nome": "Chiaffreda"
     },
     {
         "nome": "Chiara"
     },
     {
-        "nome": "Chiarastella"
-    },
-    {
-        "nome": "Chiarella"
-    },
-    {
-        "nome": "Chiaretta"
-    },
-    {
-        "nome": "Chiarina"
-    },
-    {
-        "nome": "Chicca"
-    },
-    {
-        "nome": "Ciana"
-    },
-    {
-        "nome": "Cicita"
-    },
-    {
-        "nome": "Cina"
-    },
-    {
         "nome": "Cinzia"
-    },
-    {
-        "nome": "Cipriana"
-    },
-    {
-        "nome": "Cira"
-    },
-    {
-        "nome": "Cirene"
-    },
-    {
-        "nome": "Ciretta"
-    },
-    {
-        "nome": "Ciriaca"
-    },
-    {
-        "nome": "Cirilla"
-    },
-    {
-        "nome": "Cirina"
-    },
-    {
-        "nome": "Cisa"
-    },
-    {
-        "nome": "Cisella"
-    },
-    {
-        "nome": "Cita"
-    },
-    {
-        "nome": "Civita"
     },
     {
         "nome": "Clara"
     },
     {
-        "nome": "Clarenza"
-    },
-    {
-        "nome": "Clarenzia"
-    },
-    {
-        "nome": "Claretta"
-    },
-    {
-        "nome": "Clarice"
-    },
-    {
         "nome": "Clarissa"
-    },
-    {
-        "nome": "Clarita"
     },
     {
         "nome": "Claudia"
@@ -2055,40 +378,10 @@ const nomiDatabase = [
         "nome": "Clelia"
     },
     {
-        "nome": "Clemen"
-    },
-    {
-        "nome": "Clementa"
-    },
-    {
-        "nome": "Clemente"
-    },
-    {
         "nome": "Clementina"
     },
     {
-        "nome": "Clemenza"
-    },
-    {
-        "nome": "Clemenzia"
-    },
-    {
         "nome": "Cleo"
-    },
-    {
-        "nome": "Cleofe"
-    },
-    {
-        "nome": "Cleofina"
-    },
-    {
-        "nome": "Cleonice"
-    },
-    {
-        "nome": "Cleonilde"
-    },
-    {
-        "nome": "Cleontina"
     },
     {
         "nome": "Cleopatra"
@@ -2097,28 +390,7 @@ const nomiDatabase = [
         "nome": "Cleope"
     },
     {
-        "nome": "Cleria"
-    },
-    {
-        "nome": "Clerice"
-    },
-    {
-        "nome": "Cleta"
-    },
-    {
-        "nome": "Clia"
-    },
-    {
-        "nome": "Cliceria"
-    },
-    {
-        "nome": "Climene"
-    },
-    {
         "nome": "Clio"
-    },
-    {
-        "nome": "Clita"
     },
     {
         "nome": "Clizia"
@@ -2127,229 +399,25 @@ const nomiDatabase = [
         "nome": "Clodia"
     },
     {
-        "nome": "Clodomira"
-    },
-    {
-        "nome": "Clodovea"
-    },
-    {
         "nome": "Cloe"
-    },
-    {
-        "nome": "Clora"
-    },
-    {
-        "nome": "Clori"
-    },
-    {
-        "nome": "Cloride"
-    },
-    {
-        "nome": "Clorinda"
     },
     {
         "nome": "Clotilde"
     },
     {
-        "nome": "Coletta"
-    },
-    {
-        "nome": "Colomba"
-    },
-    {
-        "nome": "Colombina"
-    },
-    {
-        "nome": "Coltura"
-    },
-    {
-        "nome": "Comasia"
-    },
-    {
-        "nome": "Comincio"
-    },
-    {
-        "nome": "Comita"
-    },
-    {
-        "nome": "Comunarda"
-    },
-    {
-        "nome": "Cona"
-    },
-    {
-        "nome": "Concepita"
-    },
-    {
-        "nome": "Concessa"
-    },
-    {
-        "nome": "Concessina"
-    },
-    {
         "nome": "Concetta"
-    },
-    {
-        "nome": "Concettina"
-    },
-    {
-        "nome": "Concezia"
-    },
-    {
-        "nome": "Concezione"
-    },
-    {
-        "nome": "Conchita"
-    },
-    {
-        "nome": "Concita"
-    },
-    {
-        "nome": "Concordia"
-    },
-    {
-        "nome": "Conforta"
-    },
-    {
-        "nome": "Conina"
-    },
-    {
-        "nome": "Consalva"
-    },
-    {
-        "nome": "Consiglia"
-    },
-    {
-        "nome": "Consilia"
-    },
-    {
-        "nome": "Consola"
-    },
-    {
-        "nome": "Consolata"
-    },
-    {
-        "nome": "Consolazione"
-    },
-    {
-        "nome": "Consolina"
-    },
-    {
-        "nome": "Consuela"
-    },
-    {
-        "nome": "Consuelo"
-    },
-    {
-        "nome": "Contarda"
-    },
-    {
-        "nome": "Contardina"
-    },
-    {
-        "nome": "Cora"
-    },
-    {
-        "nome": "Coraggio"
-    },
-    {
-        "nome": "Coralla"
-    },
-    {
-        "nome": "Corallina"
-    },
-    {
-        "nome": "Corallo"
-    },
-    {
-        "nome": "Cordelia"
-    },
-    {
-        "nome": "Corilla"
-    },
-    {
-        "nome": "Corina"
-    },
-    {
-        "nome": "Corinda"
     },
     {
         "nome": "Corinna"
     },
     {
-        "nome": "Corinta"
-    },
-    {
-        "nome": "Corinto"
-    },
-    {
         "nome": "Cornelia"
-    },
-    {
-        "nome": "Corona"
-    },
-    {
-        "nome": "Coronata"
-    },
-    {
-        "nome": "Corrada"
-    },
-    {
-        "nome": "Corradina"
-    },
-    {
-        "nome": "Corsina"
-    },
-    {
-        "nome": "Cortese"
-    },
-    {
-        "nome": "Cortesia"
-    },
-    {
-        "nome": "Cortesina"
-    },
-    {
-        "nome": "Cortina"
-    },
-    {
-        "nome": "Cosetta"
-    },
-    {
-        "nome": "Cosima"
-    },
-    {
-        "nome": "Cosimina"
-    },
-    {
-        "nome": "Cosmina"
-    },
-    {
-        "nome": "Costantina"
     },
     {
         "nome": "Costanza"
     },
     {
-        "nome": "Crescentina"
-    },
-    {
-        "nome": "Crescenza"
-    },
-    {
-        "nome": "Crescenzia"
-    },
-    {
-        "nome": "Creusa"
-    },
-    {
         "nome": "Criseide"
-    },
-    {
-        "nome": "Crispina"
-    },
-    {
-        "nome": "Crista"
     },
     {
         "nome": "Cristiana"
@@ -2358,73 +426,16 @@ const nomiDatabase = [
         "nome": "Cristina"
     },
     {
-        "nome": "Cristofora"
-    },
-    {
-        "nome": "Croce"
-    },
-    {
-        "nome": "Crocefissa"
-    },
-    {
-        "nome": "Crocetta"
-    },
-    {
-        "nome": "Crocifissa"
-    },
-    {
-        "nome": "Crocina"
-    },
-    {
-        "nome": "Cunegonda"
-    },
-    {
-        "nome": "Curzia"
-    },
-    {
         "nome": "Dafne"
     },
     {
-        "nome": "Dagoberta"
-    },
-    {
         "nome": "Daiana"
-    },
-    {
-        "nome": "Dalcisa"
-    },
-    {
-        "nome": "Dalgisa"
     },
     {
         "nome": "Dalia"
     },
     {
         "nome": "Dalila"
-    },
-    {
-        "nome": "Dalinda"
-    },
-    {
-        "nome": "Dalma"
-    },
-    {
-        "nome": "Dalmata"
-    },
-    {
-        "nome": "Dalmazia"
-    },
-    {
-        "nome": "Dalmina"
-    },
-    {
-        "nome": "Damasa"
-    },
-    {
-        "nome": "Damasca"
-    },
-    {
-        "nome": "Damasco"
     },
     {
         "nome": "Damiana"

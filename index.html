@@ -557,8 +557,6 @@
 async function getWiki(nome, targetId) {
     const box = document.getElementById(targetId);
     if (!box) return;
-    
-    box.innerHTML = `<p style="color:#aaa; font-size:0.85rem; font-style:italic;">Analisi enciclopedica in corso...</p>`;
 
     const pulisciHTML = (html) => {
         if (!html) return "";
@@ -567,89 +565,69 @@ async function getWiki(nome, targetId) {
                    .replace(/style="[^"]*"/g, '');
     };
 
-    try {
-        // 1. Chiamata API per ottenere l'HTML completo della sezione "nome"
+    // Funzione interna per fare la chiamata pulita
+    async function fetchWikiData(titoloCercato) {
         const params = new URLSearchParams({
             action: "query",
             prop: "extracts",
-            titles: `${nome}|${nome} (nome)`,
+            titles: titoloCercato,
             format: "json",
             origin: "*",
-            redirects: 1 // Segue i rimandi automatici
+            redirects: 1
         });
-
         const resp = await fetch(`https://it.wikipedia.org/w/api.php?${params}`);
         const data = await resp.json();
-        
         const pages = data.query.pages;
         const pageId = Object.keys(pages)[0];
-        const page = pages[pageId];
+        return (pageId !== "-1") ? pages[pageId] : null;
+    }
 
-        if (pageId === "-1" || !page.extract) throw new Error("Pagina non trovata");
+    try {
+        // TENTATIVO 1: Nome secco (es. "Azzurra")
+        let page = await fetchWikiData(`${nome}_(nome)`);
 
-        // Creiamo un elemento virtuale per manipolare il contenuto
+        // TENTATIVO 2: Se fallisce, prova "Nome (nome)" (es. "Azzurra (nome)")
+        if (!page || (page.extract && page.extract.includes("refer-to"))) {
+            const fallbackPage = await fetchWikiData(nome);
+            if (fallbackPage) page = fallbackPage;
+        }
+
+        if (!page || !page.extract) throw new Error("Vuoto");
+
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = page.extract;
         
         let contenutoEstratto = "";
+        const titoli = tempDiv.querySelectorAll('h2, h3');
 
-        // 2. LOGICA DI ESTRAZIONE AGGRESSIVA
-        // Cerchiamo tutti i titoli (h2, h3, h4)
-        const tuttiITitoli = tempDiv.querySelectorAll('h2, h3, h4');
-        
-        tuttiITitoli.forEach(titolo => {
-            const testoTitolo = titolo.innerText.toLowerCase();
-            
-            // Verifichiamo se il titolo contiene le parole chiave
-            if (testoTitolo.includes("origine") || testoTitolo.includes("diffusione") || testoTitolo.includes("onomastico")) {
-                let sezioneCorpo = "";
-                let elementoCorrente = titolo.nextElementSibling;
-
-                // Raccogliamo tutti i paragrafi (p) e liste (ul/ol) finché non troviamo un altro titolo dello stesso livello o superiore
-                while (elementoCorrente && !['H2', 'H3'].includes(elementoCorrente.tagName)) {
-                    // Evitiamo di prendere tabelle o box vuoti
-                    if (['P', 'UL', 'OL', 'DL'].includes(elementoCorrente.tagName)) {
-                        sezioneCorpo += elementoCorrente.outerHTML;
-                    }
-                    elementoCorrente = elementoCorrente.nextElementSibling;
+        titoli.forEach(t => {
+            const testoTitolo = t.innerText.toLowerCase();
+            if (/origine|diffusione|onomastico/.test(testoTitolo)) {
+                let corpo = "";
+                let prossimo = t.nextElementSibling;
+                while (prossimo && !['H2', 'H3'].includes(prossimo.tagName)) {
+                    corpo += prossimo.outerHTML;
+                    prossimo = prossimo.nextElementSibling;
                 }
-
-                if (sezioneCorpo.trim() !== "") {
-                    contenutoEstratto += `
-                        <div style="margin-bottom:20px; border-left:3px solid var(--primary); padding-left:12px; background: rgba(255,107,107,0.02); padding-top:5px; padding-bottom:5px;">
-                            <h4 style="margin:0 0 8px 0; color:var(--primary); font-size:1rem; text-transform:capitalize;">${titolo.innerText}</h4>
-                            <div style="font-size:0.9rem; line-height:1.6; color:#333;">${pulisciHTML(sezioneCorpo)}</div>
-                        </div>`;
-                }
+                contenutoEstratto += `
+                    <div style="margin-bottom:15px; border-left:3px solid var(--primary); padding-left:10px;">
+                        <h4 style="color:var(--primary); margin:0 0 5px 0;">${t.innerText}</h4>
+                        <div style="font-size:0.9rem; line-height:1.5;">${pulisciHTML(corpo)}</div>
+                    </div>`;
             }
         });
 
-        // 3. FALLBACK: Se la ricerca per titoli fallisce (succede se la pagina è piatta)
-        if (contenutoEstratto === "") {
-            // Prendiamo i primi paragrafi che contengono tipicamente le info sull'origine
-            const paragrafi = Array.from(tempDiv.querySelectorAll('p')).slice(0, 4);
-            const intro = paragrafi.map(p => p.outerHTML).join('');
-            
-            contenutoEstratto = `
-                <div style="font-size:0.9rem; line-height:1.6; color:#444;">
-                    <p style="font-size:0.75rem; color:#999; font-weight:bold; margin-bottom:8px; text-transform:uppercase; border-bottom:1px solid #eee;">Estratto Enciclopedico:</p>
-                    ${pulisciHTML(intro)}
-                </div>`;
+        // Se non trova sezioni, prende l'intro
+        if (!contenutoEstratto) {
+            const intro = Array.from(tempDiv.querySelectorAll('p')).slice(0, 3).map(p => p.outerHTML).join('');
+            contenutoEstratto = `<div style="font-size:0.9rem; line-height:1.5;">${pulisciHTML(intro)}</div>`;
         }
 
-        const wikiLink = `https://it.wikipedia.org/wiki/${encodeURIComponent(page.title)}`;
-        box.innerHTML = `
-            <div class="wiki-fade-in">
-                ${contenutoEstratto}
-                <div style="margin-top:15px; text-align:right;">
-                    <a href="${wikiLink}" target="_blank" style="color:var(--primary); font-size:0.8rem; font-weight:bold; text-decoration:none; border:1px solid var(--primary); padding:4px 10px; border-radius:10px;">
-                        Scheda Wikipedia ↗
-                    </a>
-                </div>
-            </div>`;
+        const link = `https://it.wikipedia.org/wiki/${encodeURIComponent(page.title)}`;
+        box.innerHTML = `${contenutoEstratto}<a href="${link}" target="_blank" style="display:block; margin-top:10px; color:var(--primary); font-size:0.8rem; text-decoration:none; font-weight:bold;">Leggi tutto su Wikipedia ↗</a>`;
 
     } catch (e) {
-        box.innerHTML = `<p style="font-size:0.85rem; color:#888;">Dati non disponibili per <strong>${nome}</strong>.</p>`;
+        box.innerHTML = `<p style="font-size:0.8rem; color:#888;">Nessun dettaglio trovato per "${nome}".</p>`;
     }
 }
 	
